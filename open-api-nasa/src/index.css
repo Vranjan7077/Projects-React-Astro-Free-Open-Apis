@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+body {
+  background: #f8f3ec;
+}
+
+.nasa-container {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.nasa-card {
+  border: 3px solid #f1f1f1;
+  padding: 1.5rem 2rem;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+  }
+  p {
+    line-height: 1.5;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-wrap: balance;
+    i {
+      padding-right: 5px;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nasa-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  button {
+    &.reset,
+    &.search {
+      padding: 16px 20px;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      background-color: #105bd8;
+      cursor: pointer;
+      border: none;
+      font-weight: 600;
+      margin-left: 5px;
+      line-height: 1em;
+    }
+    &:disabled {
+      cursor: not-allowed !important;
+      background-color: #8c8c8c !important;
+    }
+    &.reset {
+      background-color: red;
+    }
+  }
+}
+
+header {
+  background-color: #212121;
+  height: 155px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  p {
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+  }
+  > p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.nasa-container--apod {
+  margin: 20px auto;
+}
+
+input {
+  border: 1px solid grey;
+  border-radius: 4px;
+  color: #8c8c8c !important;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px 0;
+  max-width: 100% !important;
+}
+
+.nasa--img-vid {
+  ul:not(.keywords) {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    li {
+      flex: 0 0 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: white;
+      margin-top: 10px;
+      margin-bottom: 0;
+      color: #5d5c5b;
+      line-height: 1.45;
+      font-size: 13px;
+      height: max-content;
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.search-results {
+  margin-top: 20px;
+  h2 {
+    margin: 10px auto;
+  }
+}
+
+.card-content {
+  padding: 15px 15px 30px 15px;
+  display: block;
+  p:not(:first-of-type) {
+    padding-top: 10px;
+  }
+  p {
+    i {
+      margin-right: 5px;
+    }
+  }
+  ul.keywords {
+    gap: 2.5px;
+    padding-top: 10px;
+    li {
+      flex: none;
+      box-shadow: none;
+      border: none;
+      max-width: 100%;
+      letter-spacing: 0.1em;
+      background-color: #272822;
+      border-radius: 0.25em;
+      color: #cbd5e0;
+      display: inline-block;
+      font-size: 0.625em;
+      line-height: 2em;
+      margin: 0 0.25em;
+      padding: 0 0.5em;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .nasa--img-vid {
+    ul:not(.keywords) {
+      li {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  header {
+    height: 100%;
+  }
+  .nasa-container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .nasa-card {
+    padding: 1.5rem 1rem;
+    div {
+      flex-direction: column;
+    }
+  }
+  .nasa-form {
+    flex-direction: column;
+    button {
+      &.reset,
+      &.search {
+        width: 200px;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .nasa--img-vid {
+    ul:not(.keywords) {
+      li {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+      }
+    }
+  }
+}
