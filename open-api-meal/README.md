@@ -72,8 +72,8 @@ Install all the required dependencies and start the dev server:
 
 ## 💻 Environments
 
-Repo Link : [See Here]()
+Repo Link : [See Here](https://github.com/Vranjan7077/Projects-React-Astro-Free-Open-Apis/tree/master/open-api-meal)
 
 ## 🧑‍🎓Demo
 
-[Live URL]()
+[Live URL](https://open-api-demo-meal.netlify.app/)
