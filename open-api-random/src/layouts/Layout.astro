@@ -1,0 +1,49 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props as Props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="react.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <ViewTransitions />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    <style lang="scss">
+      :where(*, *::before, *::after) {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #f8f3ec;
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      }
+      main {
+        max-width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 3rem;
+        padding-left: 3rem;
+      }
+    </style>
+  </body>
+</html>

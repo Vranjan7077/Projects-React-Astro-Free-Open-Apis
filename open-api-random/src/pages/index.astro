@@ -1,0 +1,19 @@
+---
+import Layout from "$layouts/Layout.astro";
+import RandomQuote from "$components/RandomQuote";
+import RandomColor from "$components/RandomColor";
+import RandomImage from "$components/RandomImage";
+import "../styles/index.scss";
+---
+
+<Layout
+  title="React - Open Free Random Api"
+  description="Book Search using open library API integrated with astro db"
+>
+  <h2>Astro</h2>
+  <section class="random--quote">
+    <RandomQuote client:load />
+    <RandomColor client:load />
+    <RandomImage client:load />
+  </section>
+</Layout>
