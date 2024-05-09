@@ -1,0 +1,117 @@
+.section {
+    padding: 1.25rem;
+
+    &--basic-details {
+        .details {
+            margin-bottom: 20px;
+
+            h3 {
+                font-family: var(--ff-nunito);
+            }
+        }
+    }
+
+    &--basic-card {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media screen and (max-width: 690px) {
+            flex-direction: column;
+        }
+
+        &__details {
+            border: 1px solid grey;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.0509803922);
+            padding: 1rem;
+            &:hover{
+                background-color: aliceblue;
+            }
+        }
+
+        &__list {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                list-style: none;
+                margin: 10px auto;
+
+                li {
+                    border: 1px solid #272822;
+                    box-shadow: 0 5px 8px #0003;
+                    max-width: 100%;
+                    letter-spacing: 0.1em;
+                    border-radius: 0.25em;
+                    color: #000;
+                    display: inline-block;
+                    line-height: 2em;
+                    margin: 0 0.25em;
+                    padding: 0 0.5em;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    font-weight: 600;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.stats {
+    &--details {
+        display: flex;
+        justify-content: space-between;
+        vertical-align: middle;
+        margin-top: 0.5rem;
+
+        @media screen and (max-width: 690px) {
+            flex-direction: column;
+        }
+
+        span {
+            font-size: 1rem;
+            line-height: 2rem;
+            font-weight: 600;
+            opacity: 0.7;
+
+            &:first-child {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+progress {
+    position: relative;
+    width: 80%;
+    height: 20px;
+    margin: auto 10px;
+
+    @media screen and (max-width: 690px) {
+        margin: 0;
+    }
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.d-flex {
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        opacity: 0.7;
+
+        &:first-child {
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+    }
+}

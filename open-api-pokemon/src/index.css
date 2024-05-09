@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+
+:root {
+  --ff-inter: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --ff-nunito: "Nunito", sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f3ec;
+  font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+html,
+body {
+  font-family: var(--ff-inter);
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+.container {
+  max-width: 1040px;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin: 20px auto;
+
+  @media screen and (max-width: 1025px) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  &.align,
+  &.not-found {
+    text-align: center;
+  }
+
+  &.not-found {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+hr {
+  margin: 20px auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  height: max-content;
+  /* display: block; */
+}
+
+.load-more-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  font-family: var(--ff-nunito);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0 8px 15px #0000001a;
+  transition: all 0.3s ease 0s;
+  background-color: white;
+
+  &:hover {
+    box-shadow: #0000003d 0 3px 8px;
+    transform: translateY(-7px);
+    cursor: pointer;
+  }
+}
