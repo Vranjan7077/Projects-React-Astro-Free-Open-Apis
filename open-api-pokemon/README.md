@@ -105,4 +105,4 @@ Repo Link : [See Here](https://github.com/Vranjan7077/Projects-React-Astro-Free-
 
 ## 🧑‍🎓Demo
 
-[Live URL](open-api-demo-pokemon.netlify.app)
+[Live URL](https://open-api-demo-pokemon.netlify.app/)
