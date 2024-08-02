@@ -46,4 +46,4 @@ Repo Link : [See Here](https://github.com/Vranjan7077/Projects-React-Astro-Free-
 
 ## 🧑‍🎓Demo
 
-[Live URL]()
+[Live URL](https://open-api-advice.netlify.app)
