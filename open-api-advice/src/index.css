@@ -1,0 +1,65 @@
+:root {
+  --center: center;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  justify-content: var(--center);
+  align-items: var(--center);
+  text-align: var(--center);
+}
+
+.card {
+  background: whitesmoke;
+  width: 70%;
+  height: 160px;
+  display: flex;
+  align-items: var(--center);
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 2%;
+  box-shadow: 10px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before,
+.card:after {
+  content: "=================";
+  font-family: var(--font-family);
+  font-size: 1em;
+  text-align: center;
+  display: block;
+  position: absolute;
+}
+
+.card::before {
+  padding: 0 0 1.1em 0;
+  top: 0;
+}
+
+.card::after {
+  bottom: 0;
+  padding: 1.1em 0 0 0;
+}
+
+.heading {
+  display: flex;
+  align-items: var(--center);
+  height: 582px;
+  font-size: 1.25rem;
+}
